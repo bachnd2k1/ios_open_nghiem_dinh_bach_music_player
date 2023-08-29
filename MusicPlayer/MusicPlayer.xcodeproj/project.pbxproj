@@ -20,6 +20,10 @@
 		52C3E3722A9C3E3C002D77BA /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3E3712A9C3E3B002D77BA /* SongCell.swift */; };
 		52C3E3742A9C417D002D77BA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3E3732A9C417D002D77BA /* Song.swift */; };
 		52C3E37A2A9C930F002D77BA /* LayoutOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3E3792A9C930F002D77BA /* LayoutOptions.swift */; };
+		52C3E37F2A9DC9BE002D77BA /* Album 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52C3E37C2A9DC9BD002D77BA /* Album 1.mp3 */; };
+		52C3E3802A9DC9BE002D77BA /* Album 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52C3E37D2A9DC9BD002D77BA /* Album 3.mp3 */; };
+		52C3E3812A9DC9BE002D77BA /* Album 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52C3E37E2A9DC9BE002D77BA /* Album 2.mp3 */; };
+		52C3E3832A9E0733002D77BA /* RemoteCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3E3822A9E0733002D77BA /* RemoteCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		52C3E3712A9C3E3B002D77BA /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		52C3E3732A9C417D002D77BA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		52C3E3792A9C930F002D77BA /* LayoutOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOptions.swift; sourceTree = "<group>"; };
+		52C3E37C2A9DC9BD002D77BA /* Album 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Album 1.mp3"; sourceTree = "<group>"; };
+		52C3E37D2A9DC9BD002D77BA /* Album 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Album 3.mp3"; sourceTree = "<group>"; };
+		52C3E37E2A9DC9BE002D77BA /* Album 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Album 2.mp3"; sourceTree = "<group>"; };
+		52C3E3822A9E0733002D77BA /* RemoteCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 		5238630D2A970BBC0039EF10 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				52C3E37B2A9DC9AD002D77BA /* Audio */,
 				5238630E2A970BBC0039EF10 /* AppDelegate.swift */,
 				523863102A970BBC0039EF10 /* SceneDelegate.swift */,
 				523863122A970BBC0039EF10 /* ViewController.swift */,
@@ -118,6 +127,7 @@
 				52C3E3712A9C3E3B002D77BA /* SongCell.swift */,
 				52C3E3732A9C417D002D77BA /* Song.swift */,
 				52C3E3792A9C930F002D77BA /* LayoutOptions.swift */,
+				52C3E3822A9E0733002D77BA /* RemoteCommand.swift */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -137,6 +147,16 @@
 				523863312A970BBE0039EF10 /* MusicPlayerUITestsLaunchTests.swift */,
 			);
 			path = MusicPlayerUITests;
+			sourceTree = "<group>";
+		};
+		52C3E37B2A9DC9AD002D77BA /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				52C3E37C2A9DC9BD002D77BA /* Album 1.mp3 */,
+				52C3E37E2A9DC9BE002D77BA /* Album 2.mp3 */,
+				52C3E37D2A9DC9BD002D77BA /* Album 3.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +265,10 @@
 			files = (
 				5238631B2A970BBE0039EF10 /* LaunchScreen.storyboard in Resources */,
 				523863182A970BBE0039EF10 /* Assets.xcassets in Resources */,
+				52C3E3812A9DC9BE002D77BA /* Album 2.mp3 in Resources */,
 				523863162A970BBC0039EF10 /* Main.storyboard in Resources */,
+				52C3E37F2A9DC9BE002D77BA /* Album 1.mp3 in Resources */,
+				52C3E3802A9DC9BE002D77BA /* Album 3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C3E37A2A9C930F002D77BA /* LayoutOptions.swift in Sources */,
+				52C3E3832A9E0733002D77BA /* RemoteCommand.swift in Sources */,
 				52C3E3742A9C417D002D77BA /* Song.swift in Sources */,
 				523863132A970BBC0039EF10 /* ViewController.swift in Sources */,
 				5238630F2A970BBC0039EF10 /* AppDelegate.swift in Sources */,
@@ -453,6 +477,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4UADZUL7G6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -460,12 +485,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = No.MusicPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = Bach.Nghiem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -480,6 +506,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4UADZUL7G6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -487,12 +514,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = No.MusicPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = Bach.Nghiem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

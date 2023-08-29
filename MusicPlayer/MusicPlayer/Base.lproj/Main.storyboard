@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FhZ-ab-FqY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,95 +18,102 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="demo" translatesAutoresizingMaskIntoConstraints="NO" id="aop-5a-IQ6">
-                                <rect key="frame" x="50" y="154" width="314" height="291"/>
+                                <rect key="frame" x="50" y="132" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aop-5a-IQ6" secondAttribute="height" multiplier="1:1" id="UzH-nd-lyJ"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lần Cuối" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlS-Fg-lIL">
-                                <rect key="frame" x="50" y="495" width="101.5" height="30"/>
+                                <rect key="frame" x="50" y="466" width="314" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngọt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUH-qy-oJm">
-                                <rect key="frame" x="50" y="540" width="43.5" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="o3V-oQ-HG7"/>
-                                </constraints>
+                                <rect key="frame" x="50" y="514" width="314" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu3-cg-NR9">
-                                <rect key="frame" x="173" y="696" width="81" height="56"/>
+                                <rect key="frame" x="177" y="688" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="J3S-lg-Sh5"/>
+                                    <constraint firstAttribute="height" constant="60" id="cKw-lb-EiI"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="pause.circle.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="pause.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                                </state>
                                 <connections>
                                     <action selector="handleButtonPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tM7-ZZ-Bc8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ens-2U-d1Y">
-                                <rect key="frame" x="104" y="707" width="49" height="36"/>
+                                <rect key="frame" x="113" y="708" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="59v-fI-Vqk"/>
+                                    <constraint firstAttribute="height" constant="20" id="rVY-3O-L9u"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="backward.end.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="backward.end.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleButtonPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D6i-21-gMo"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RIx-1F-UWT">
-                                <rect key="frame" x="48" y="611" width="318" height="31"/>
+                                <rect key="frame" x="48" y="568" width="318" height="31"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oF6-WP-C8D">
-                                <rect key="frame" x="276" y="707" width="49" height="36"/>
+                                <rect key="frame" x="281" y="708" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Rej-Tl-de9"/>
+                                    <constraint firstAttribute="height" constant="20" id="cZG-Fg-h66"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="forward.end.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="forward.end.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleButtonNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0n-tD-X8y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="pu3-cg-NR9" firstAttribute="leading" secondItem="Ens-2U-d1Y" secondAttribute="trailing" constant="20" id="6Fq-nb-NfT"/>
-                            <constraint firstItem="pu3-cg-NR9" firstAttribute="top" secondItem="RIx-1F-UWT" secondAttribute="bottom" constant="55" id="7sr-s5-OZf"/>
-                            <constraint firstItem="pu3-cg-NR9" firstAttribute="top" secondItem="RIx-1F-UWT" secondAttribute="bottom" constant="55" id="Aaa-S0-SvJ"/>
-                            <constraint firstItem="eUH-qy-oJm" firstAttribute="top" secondItem="TlS-Fg-lIL" secondAttribute="bottom" constant="15" id="Ats-zl-85b"/>
+                            <constraint firstItem="Ens-2U-d1Y" firstAttribute="centerY" secondItem="pu3-cg-NR9" secondAttribute="centerY" id="1kV-fe-hWt"/>
+                            <constraint firstItem="eUH-qy-oJm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="AOU-P5-yHd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RIx-1F-UWT" secondAttribute="trailing" constant="50" id="BdB-sR-AYr"/>
-                            <constraint firstItem="TlS-Fg-lIL" firstAttribute="top" secondItem="aop-5a-IQ6" secondAttribute="bottom" constant="50" id="EQC-PC-run"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eUH-qy-oJm" secondAttribute="bottom" constant="291" id="Eat-bw-2ab"/>
-                            <constraint firstItem="aop-5a-IQ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="FUR-bp-SUl"/>
-                            <constraint firstItem="aop-5a-IQ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="Fwa-hG-nzy"/>
+                            <constraint firstItem="pu3-cg-NR9" firstAttribute="top" secondItem="RIx-1F-UWT" secondAttribute="bottom" constant="90" id="CMh-gB-S2Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eUH-qy-oJm" secondAttribute="trailing" constant="50" id="DNN-Az-ebi"/>
+                            <constraint firstItem="oF6-WP-C8D" firstAttribute="centerY" secondItem="pu3-cg-NR9" secondAttribute="centerY" id="DYy-iD-s12"/>
+                            <constraint firstItem="eUH-qy-oJm" firstAttribute="top" secondItem="TlS-Fg-lIL" secondAttribute="bottom" constant="18" id="EIJ-ae-2v0"/>
+                            <constraint firstItem="TlS-Fg-lIL" firstAttribute="bottom" secondItem="aop-5a-IQ6" secondAttribute="bottom" constant="50" id="Ezk-EV-jbD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aop-5a-IQ6" secondAttribute="trailing" constant="50" id="GCS-9U-kY1"/>
-                            <constraint firstItem="oF6-WP-C8D" firstAttribute="top" secondItem="RIx-1F-UWT" secondAttribute="bottom" constant="66" id="Hn2-e4-XcT"/>
-                            <constraint firstItem="pu3-cg-NR9" firstAttribute="leading" secondItem="Ens-2U-d1Y" secondAttribute="trailing" constant="20" id="Jsv-DL-RTI"/>
-                            <constraint firstItem="eUH-qy-oJm" firstAttribute="top" secondItem="TlS-Fg-lIL" secondAttribute="bottom" constant="15" id="Jy1-Li-EAh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oF6-WP-C8D" secondAttribute="bottom" constant="119" id="KhU-4I-iO3"/>
-                            <constraint firstItem="oF6-WP-C8D" firstAttribute="leading" secondItem="pu3-cg-NR9" secondAttribute="trailing" constant="22" id="L4N-3u-JVt"/>
-                            <constraint firstItem="Ens-2U-d1Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="PNQ-l2-Ojp"/>
-                            <constraint firstItem="eUH-qy-oJm" firstAttribute="top" secondItem="TlS-Fg-lIL" secondAttribute="bottom" constant="15" id="Pfs-2X-eUy"/>
-                            <constraint firstItem="TlS-Fg-lIL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Q4D-yK-kBn"/>
-                            <constraint firstItem="TlS-Fg-lIL" firstAttribute="top" secondItem="aop-5a-IQ6" secondAttribute="bottom" constant="50" id="XQF-9t-pq8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TlS-Fg-lIL" secondAttribute="trailing" symbolic="YES" id="bOv-yi-yWd"/>
-                            <constraint firstItem="RIx-1F-UWT" firstAttribute="top" secondItem="eUH-qy-oJm" secondAttribute="bottom" constant="40" id="bkM-VR-l5G"/>
+                            <constraint firstItem="RIx-1F-UWT" firstAttribute="top" secondItem="eUH-qy-oJm" secondAttribute="bottom" constant="30" id="KpI-lJ-RmD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oF6-WP-C8D" secondAttribute="trailing" constant="113" id="MQe-4W-nO7"/>
                             <constraint firstItem="RIx-1F-UWT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="dAc-oS-aNu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pu3-cg-NR9" secondAttribute="bottom" constant="110" id="ecZ-JZ-wuU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oF6-WP-C8D" secondAttribute="trailing" constant="89" id="eoX-ef-St1"/>
-                            <constraint firstItem="aop-5a-IQ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="kLA-j0-Vbu"/>
+                            <constraint firstItem="aop-5a-IQ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="kLA-j0-Vbu"/>
                             <constraint firstItem="aop-5a-IQ6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lZd-Fi-xaV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eUH-qy-oJm" secondAttribute="bottom" constant="291" id="m1d-vC-kTw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ens-2U-d1Y" secondAttribute="bottom" constant="119" id="ovd-kQ-RIE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eUH-qy-oJm" secondAttribute="trailing" symbolic="YES" id="uOM-v7-R5P"/>
-                            <constraint firstItem="oF6-WP-C8D" firstAttribute="leading" secondItem="pu3-cg-NR9" secondAttribute="trailing" constant="22" id="uud-XT-OGV"/>
-                            <constraint firstItem="eUH-qy-oJm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="xPP-hJ-Duj"/>
-                            <constraint firstItem="Ens-2U-d1Y" firstAttribute="top" secondItem="RIx-1F-UWT" secondAttribute="bottom" constant="66" id="z2n-a4-aCn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TlS-Fg-lIL" secondAttribute="trailing" constant="50" id="oI3-n7-UaM"/>
+                            <constraint firstItem="Ens-2U-d1Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="vfn-6L-uSF"/>
+                            <constraint firstItem="TlS-Fg-lIL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="w8k-X7-9AP"/>
+                            <constraint firstItem="pu3-cg-NR9" firstAttribute="centerX" secondItem="RIx-1F-UWT" secondAttribute="centerX" id="x6J-dA-i1U"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="artistLabel" destination="eUH-qy-oJm" id="X4y-Lc-AzT"/>
+                        <outlet property="nextButton" destination="oF6-WP-C8D" id="hEA-mW-Pjf"/>
                         <outlet property="playButton" destination="pu3-cg-NR9" id="Dce-0r-q4Y"/>
+                        <outlet property="prevButton" destination="Ens-2U-d1Y" id="IPi-Sv-GK9"/>
+                        <outlet property="slider" destination="RIx-1F-UWT" id="Cn4-Pz-LUr"/>
                         <outlet property="songImage" destination="aop-5a-IQ6" id="Q1w-MW-zfc"/>
                         <outlet property="songLabel" destination="TlS-Fg-lIL" id="wMm-dI-hvT"/>
                     </connections>
@@ -126,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" rowHeight="118" id="xpl-S3-KnO" customClass="SongCell" customModule="Testing" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="songCell" rowHeight="118" id="xpl-S3-KnO" customClass="SongCell" customModule="MusicPlayer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xpl-S3-KnO" id="snV-yi-Z3f">

@@ -38,9 +38,9 @@ final class TableViewController: UIViewController {
 extension TableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let selectedItem = songs[indexPath.row]
         guard let viewController  = storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
-        viewController.selectedSong = selectedItem
+        viewController.songs = songs
+        viewController.position = indexPath.row
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
